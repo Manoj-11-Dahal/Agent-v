@@ -1,0 +1,84 @@
+{
+  "createdAt": "2026-09-16T16:54:51.330619+00:00",
+  "type": "locally-authored-custom-skills",
+  "addedCount": 12,
+  "previousSkillCount": 2911,
+  "skills": [
+    {
+      "name": "security-scope-and-test-budget",
+      "category": "security-pentesting",
+      "path": "security-pentesting/security-scope-and-test-budget/SKILL.md",
+      "worksheet": "security-pentesting/security-scope-and-test-budget/templates/assessment.md"
+    },
+    {
+      "name": "web-authorization-regression-matrix",
+      "category": "security-pentesting",
+      "path": "security-pentesting/web-authorization-regression-matrix/SKILL.md",
+      "worksheet": "security-pentesting/web-authorization-regression-matrix/templates/assessment.md"
+    },
+    {
+      "name": "api-state-machine-abuse-lab",
+      "category": "security-pentesting",
+      "path": "security-pentesting/api-state-machine-abuse-lab/SKILL.md",
+      "worksheet": "security-pentesting/api-state-machine-abuse-lab/templates/assessment.md"
+    },
+    {
+      "name": "graphql-cost-budget-assessment",
+      "category": "security-pentesting",
+      "path": "security-pentesting/graphql-cost-budget-assessment/SKILL.md",
+      "worksheet": "security-pentesting/graphql-cost-budget-assessment/templates/assessment.md"
+    },
+    {
+      "name": "network-exposure-differential-audit",
+      "category": "security-pentesting",
+      "path": "security-pentesting/network-exposure-differential-audit/SKILL.md",
+      "worksheet": "security-pentesting/network-exposure-differential-audit/templates/assessment.md"
+    },
+    {
+      "name": "linux-privilege-boundary-review",
+      "category": "security-pentesting",
+      "path": "security-pentesting/linux-privilege-boundary-review/SKILL.md",
+      "worksheet": "security-pentesting/linux-privilege-boundary-review/templates/assessment.md"
+    },
+    {
+      "name": "cloud-iam-effective-access-review",
+      "category": "security-pentesting",
+      "path": "security-pentesting/cloud-iam-effective-access-review/SKILL.md",
+      "worksheet": "security-pentesting/cloud-iam-effective-access-review/templates/assessment.md"
+    },
+    {
+      "name": "container-runtime-boundary-audit",
+      "category": "security-pentesting",
+      "path": "security-pentesting/container-runtime-boundary-audit/SKILL.md",
+      "worksheet": "security-pentesting/container-runtime-boundary-audit/templates/assessment.md"
+    },
+    {
+      "name": "ctf-binary-triage-workbench",
+      "category": "reverse-engineering-forensics",
+      "path": "reverse-engineering-forensics/ctf-binary-triage-workbench/SKILL.md",
+      "worksheet": "reverse-engineering-forensics/ctf-binary-triage-workbench/templates/assessment.md"
+    },
+    {
+      "name": "ctf-crash-minimization",
+      "category": "reverse-engineering-forensics",
+      "path": "reverse-engineering-forensics/ctf-crash-minimization/SKILL.md",
+      "worksheet": "reverse-engineering-forensics/ctf-crash-minimization/templates/assessment.md"
+    },
+    {
+      "name": "firmware-static-trust-map",
+      "category": "reverse-engineering-forensics",
+      "path": "reverse-engineering-forensics/firmware-static-trust-map/SKILL.md",
+      "worksheet": "reverse-engineering-forensics/firmware-static-trust-map/templates/assessment.md"
+    },
+    {
+      "name": "reverse-engineering-patch-diff-review",
+      "category": "reverse-engineering-forensics",
+      "path": "reverse-engineering-forensics/reverse-engineering-patch-diff-review/SKILL.md",
+      "worksheet": "reverse-engineering-forensics/reverse-engineering-patch-diff-review/templates/assessment.md"
+    }
+  ],
+  "toolsInstalled": false,
+  "targetsTested": false,
+  "existingSkillsReplaced": false,
+  "scope": "Authorized testing and controlled labs; content additions only."
+}
