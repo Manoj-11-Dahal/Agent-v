@@ -1,0 +1,323 @@
+{
+  "type": "object",
+  "properties": {
+    "binaryPackages": {
+      "type": "integer"
+    },
+    "commandSkills": {
+      "type": "integer"
+    },
+    "contentFile": {
+      "type": "string"
+    },
+    "explicitListingCommandLinks": {
+      "type": "integer"
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "inlineListingCommands": {
+      "type": "integer"
+    },
+    "listingUrl": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "packageOnlySkills": {
+      "type": "integer"
+    },
+    "rowSchemas": {
+      "const": {
+        "sources": [
+          "architecture",
+          "categories",
+          "id",
+          "links",
+          "metapackages",
+          "pageSha256",
+          "retrievedAt",
+          "updated",
+          "url",
+          "version"
+        ],
+        "packages": [
+          "anchor",
+          "commandCount",
+          "dependencies",
+          "description",
+          "id",
+          "installDeclaration",
+          "installedSize",
+          "name",
+          "source",
+          "summary"
+        ],
+        "skills": [
+          "anchor",
+          "command",
+          "contentBytes",
+          "contentOffset",
+          "contentSha256",
+          "description",
+          "documentedLongOptions",
+          "helpCharacters",
+          "helpPolicy",
+          "kind",
+          "mode",
+          "name",
+          "package",
+          "source"
+        ]
+      }
+    },
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "skillCount": {
+      "type": "integer"
+    },
+    "sourcePages": {
+      "type": "integer"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string",
+            "description": "architecture"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "categories"
+          },
+          {
+            "type": "string",
+            "description": "id"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "Package Tracker": {
+                "type": "string"
+              },
+              "Source Code Repository": {
+                "type": "string"
+              },
+              "homepage": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Package Tracker",
+              "Source Code Repository",
+              "homepage"
+            ],
+            "additionalProperties": true,
+            "description": "links"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "metapackages"
+          },
+          {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "pageSha256"
+          },
+          {
+            "type": "string",
+            "description": "retrievedAt"
+          },
+          {
+            "type": "string",
+            "description": "updated"
+          },
+          {
+            "type": "string",
+            "description": "url"
+          },
+          {
+            "type": "string",
+            "description": "version"
+          }
+        ],
+        "items": false,
+        "minItems": 10,
+        "maxItems": 10
+      }
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string",
+            "description": "anchor"
+          },
+          {
+            "type": "integer",
+            "description": "commandCount"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "dependencies"
+          },
+          {
+            "type": "string",
+            "description": "description"
+          },
+          {
+            "type": "string",
+            "description": "id"
+          },
+          {
+            "type": "string",
+            "description": "installDeclaration"
+          },
+          {
+            "type": "string",
+            "description": "installedSize"
+          },
+          {
+            "type": "string",
+            "description": "name"
+          },
+          {
+            "type": "string",
+            "description": "source"
+          },
+          {
+            "type": "string",
+            "description": "summary"
+          }
+        ],
+        "items": false,
+        "minItems": 10,
+        "maxItems": 10
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string",
+            "description": "anchor"
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "command"
+          },
+          {
+            "type": "integer",
+            "description": "contentBytes"
+          },
+          {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "contentOffset"
+          },
+          {
+            "type": [
+              "null",
+              "string"
+            ],
+            "pattern": "^[0-9a-f]{64}$",
+            "description": "contentSha256"
+          },
+          {
+            "type": "string",
+            "description": "description"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "documentedLongOptions"
+          },
+          {
+            "type": "integer",
+            "description": "helpCharacters"
+          },
+          {
+            "type": "string",
+            "description": "helpPolicy"
+          },
+          {
+            "type": "string",
+            "description": "kind"
+          },
+          {
+            "type": "string",
+            "description": "mode"
+          },
+          {
+            "type": "string",
+            "description": "name"
+          },
+          {
+            "type": "string",
+            "description": "package"
+          },
+          {
+            "type": "string",
+            "description": "source"
+          }
+        ],
+        "items": false,
+        "minItems": 14,
+        "maxItems": 14
+      }
+    }
+  },
+  "required": [
+    "binaryPackages",
+    "commandSkills",
+    "contentFile",
+    "explicitListingCommandLinks",
+    "generatedAt",
+    "inlineListingCommands",
+    "listingUrl",
+    "notes",
+    "packageOnlySkills",
+    "rowSchemas",
+    "schemaVersion",
+    "skillCount",
+    "sourcePages",
+    "storage",
+    "sources",
+    "packages",
+    "skills"
+  ],
+  "additionalProperties": true,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kali command and package reference registry",
+  "description": "Plain columnar metadata with separately byte-addressed JSONL reference content. No installed capabilities or permissions are implied."
+}
