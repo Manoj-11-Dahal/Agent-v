@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A855F7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.5" />
+      <stop offset="50%" style="stop-color:#A855F7;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.5" />
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes hoverLift {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-8px); }
+      }
+      @keyframes iconRotate {
+        0% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(5deg) scale(1.1); }
+        100% { transform: rotate(0deg) scale(1); }
+      }
+      @keyframes shimmer {
+        0% { opacity: 0; transform: translateX(-100%); }
+        50% { opacity: 1; transform: translateX(0); }
+        100% { opacity: 0; transform: translateX(100%); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Card background with rounded corners -->
+  <rect x="2" y="2" width="396" height="276" rx="16" fill="url(#cardBg)" filter="url(#cardGlow)">
+    <animate attributeName="filter" values="url(#cardGlow);none;url(#cardGlow)" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Animated border -->
+  <rect x="2" y="2" width="396" height="276" rx="16" fill="none" stroke="url(#borderGradient)" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;400" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Top accent bar -->
+  <rect x="16" y="16" width="368" height="3" rx="1.5" fill="url(#iconGradient)" opacity="0.8">
+    <animate attributeName="width" values="0;368;0" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="200;16;200" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Icon container -->
+  <g transform="translate(200, 80)" style="animation: iconRotate 4s ease-in-out infinite;">
+    <circle cx="0" cy="0" r="45" fill="#1a1a3e" stroke="url(#iconGradient)" stroke-width="2" opacity="0.9">
+      <animate attributeName="r" values="45;50;45" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Skill icon placeholder -->
+    <text x="0" y="14" text-anchor="middle" font-size="40" fill="url(#iconGradient)">🤖</text>
+  </g>
+  
+  <!-- Skill name -->
+  <text x="200" y="165" text-anchor="middle" font-family="'JetBrains Mono', monospace" 
+        font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">
+    Skill Name
+  </text>
+  
+  <!-- Category badge -->
+  <g transform="translate(200, 195)">
+    <rect x="-55" y="-12" width="110" height="24" rx="12" fill="url(#iconGradient)" opacity="0.2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'JetBrains Mono', monospace" 
+          font-size="11" font-weight="600" fill="url(#iconGradient)" text-transform="uppercase">
+      Category
+    </text>
+  </g>
+  
+  <!-- Description -->
+  <text x="200" y="230" text-anchor="middle" font-family="'Inter', sans-serif" 
+        font-size="13" font-weight="400" fill="#8892B0" width="340">
+    <tspan x="200" dy="0">Production-ready skill for autonomous agents</tspan>
+  </text>
+  
+  <!-- Stats row -->
+  <g transform="translate(50, 260)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" 
+          font-size="10" font-weight="500" fill="#5E6D8A">⭐ 2.4k</text>
+    <text x="110" y="0" font-family="'JetBrains Mono', monospace" 
+          font-size="10" font-weight="500" fill="#5E6D8A">🍴 180</text>
+    <text x="220" y="0" font-family="'JetBrains Mono', monospace" 
+          font-size="10" font-weight="500" fill="#5E6D8A">📦 v2.1.0</text>
+  </g>
+  
+  <!-- Hover shimmer effect -->
+  <rect x="2" y="2" width="396" height="276" rx="16" fill="none">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" begin="1s"/>
+  </rect>
+</svg>
