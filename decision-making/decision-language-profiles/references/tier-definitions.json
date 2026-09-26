@@ -1,0 +1,128 @@
+{
+  "standard": "hxmax-v1-local",
+  "note": "Local tier ladder defined by this library. Not an industry certification; tier-5 is not a defect-freedom claim.",
+  "controls": {
+    "C1": "Reproducible build from a clean checkout with pinned dependencies",
+    "C2": "Automated tests for every claimed behaviour",
+    "C3": "Failure-path tests: malformed input, limits, partial failure, timeout",
+    "C4": "Fuzz or property tests on externally influenced input",
+    "C5": "Concurrency and race-condition testing",
+    "C6": "Fault injection and degraded-behaviour testing",
+    "C7": "Resource bounds and leak checks with measured ceilings",
+    "C8": "Static analysis with no unresolved high-severity findings",
+    "C9": "Measured performance against a stated budget",
+    "C10": "Verified degraded-mode behaviour under limits",
+    "C11": "Input trust boundaries, allowlists and secret handling",
+    "C12": "Observability: logs, metrics, traces, alerts mapped to runbooks",
+    "C13": "Operational readiness: runbook, tested rollback, owner, rehearsed restore",
+    "C14": "Independent review and named human sign-off",
+    "C15": "Legal, privacy, accessibility and safety review"
+  },
+  "tiers": {
+    "tier-0": {
+      "label": "basic",
+      "min-score": 0.0,
+      "gate": [
+        "C1"
+      ]
+    },
+    "tier-1": {
+      "label": "good",
+      "min-score": 0.55,
+      "gate": [
+        "C1",
+        "C2",
+        "C8"
+      ]
+    },
+    "tier-2": {
+      "label": "very-good",
+      "min-score": 0.7,
+      "gate": [
+        "C1",
+        "C2",
+        "C3",
+        "C8",
+        "C11"
+      ]
+    },
+    "tier-3": {
+      "label": "excellent",
+      "min-score": 0.8,
+      "gate": [
+        "C1",
+        "C2",
+        "C3",
+        "C7",
+        "C8",
+        "C11",
+        "C12",
+        "C13"
+      ]
+    },
+    "tier-4": {
+      "label": "advanced",
+      "min-score": 0.88,
+      "gate": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13"
+      ]
+    },
+    "tier-5": {
+      "label": "hxmax",
+      "min-score": 0.93,
+      "gate": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "requires-independent-review": true,
+      "requires-named-approver": true
+    }
+  },
+  "tier-order": [
+    "tier-0",
+    "tier-1",
+    "tier-2",
+    "tier-3",
+    "tier-4",
+    "tier-5"
+  ],
+  "components": [
+    "correctness",
+    "failure-handling",
+    "readability-structure",
+    "testability",
+    "operational-readiness",
+    "performance",
+    "security"
+  ],
+  "rules": [
+    "reported tier = min(score-derived tier, gate-derived tier)",
+    "an unknown control status yields evidence-incomplete and no tier",
+    "a tier label applies to one revision under one evidence set only"
+  ]
+}

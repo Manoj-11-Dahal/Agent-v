@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "title": "SYNTHETIC EXAMPLE ONLY — choose a bounded support-triage pilot",
+  "tieTolerance": 0.01,
+  "sensitivityDelta": 0.1,
+  "criteria": [
+    {"id": "delivery", "label": "Delivery preference", "weight": 0.3, "anchors": {"low": "0: beyond the agreed pilot deadline", "high": "1: ready at the start of the pilot window"}},
+    {"id": "reliability", "label": "Reliability preference", "weight": 0.45, "anchors": {"low": "0: below the owner's minimum acceptable validated routing quality", "high": "1: meets the owner's stretch target on representative evaluation cases"}},
+    {"id": "affordability", "label": "Affordability preference within the hard spend limit", "weight": 0.25, "anchors": {"low": "0: consumes the entire approved spend envelope", "high": "1: requires no incremental spend"}}
+  ],
+  "gateDefinitions": [
+    {"id": "authority", "description": "Owner explicitly approved this pilot scope"},
+    {"id": "budget", "description": "Worst credible pilot spend fits the approved hard ceiling"},
+    {"id": "privacy", "description": "Data handling meets mandatory policy and user permissions"}
+  ],
+  "options": [
+    {
+      "id": "a", "name": "Existing-system pilot",
+      "gates": {
+        "authority": {"status": "pass", "evidence": "SYNTHETIC EX-01: assume an owner-approved bounded pilot; no real approval exists"},
+        "budget": {"status": "pass", "evidence": "SYNTHETIC EX-02: assume the scenario's spend ceiling is met"},
+        "privacy": {"status": "pass", "evidence": "SYNTHETIC EX-03: assume synthetic data and reviewed access boundaries"}
+      },
+      "scores": {
+        "delivery": {"low": 0.7, "estimate": 0.8, "high": 0.9, "evidence": "SYNTHETIC EX-04: assumed schedule preference range"},
+        "reliability": {"low": 0.8, "estimate": 0.9, "high": 0.95, "evidence": "SYNTHETIC EX-05: assumed quality preference range, not measured accuracy"},
+        "affordability": {"low": 0.5, "estimate": 0.6, "high": 0.7, "evidence": "SYNTHETIC EX-06: assumed cost preference range"}
+      }
+    },
+    {
+      "id": "b", "name": "Alternative-service pilot",
+      "gates": {
+        "authority": {"status": "pass", "evidence": "SYNTHETIC EX-07: assume approval for this limited alternative; no real approval exists"},
+        "budget": {"status": "pass", "evidence": "SYNTHETIC EX-08: assume costs stay inside the hard ceiling"},
+        "privacy": {"status": "pass", "evidence": "SYNTHETIC EX-09: assume approved use of non-sensitive synthetic inputs"}
+      },
+      "scores": {
+        "delivery": {"low": 0.8, "estimate": 0.9, "high": 0.95, "evidence": "SYNTHETIC EX-10: assumed schedule preference range"},
+        "reliability": {"low": 0.5, "estimate": 0.65, "high": 0.8, "evidence": "SYNTHETIC EX-11: unmeasured quality preference; range reflects uncertainty"},
+        "affordability": {"low": 0.8, "estimate": 0.9, "high": 0.95, "evidence": "SYNTHETIC EX-12: assumed cost preference range"}
+      }
+    },
+    {
+      "id": "c", "name": "Unrestricted data-sharing shortcut — excluded",
+      "gates": {
+        "authority": {"status": "pass", "evidence": "SYNTHETIC EX-13: generic project support is assumed, not permission to violate data rules"},
+        "budget": {"status": "pass", "evidence": "SYNTHETIC EX-14: assume budget alone would pass"},
+        "privacy": {"status": "fail", "evidence": "SYNTHETIC EX-15: violates the mandatory data-handling boundary"}
+      },
+      "scores": {
+        "delivery": {"low": 1, "estimate": 1, "high": 1, "evidence": "SYNTHETIC: intentionally attractive to demonstrate that a failed gate cannot be compensated"},
+        "reliability": {"low": 1, "estimate": 1, "high": 1, "evidence": "SYNTHETIC: intentionally optimistic hypothetical preference"},
+        "affordability": {"low": 1, "estimate": 1, "high": 1, "evidence": "SYNTHETIC: intentionally optimistic hypothetical preference"}
+      }
+    },
+    {
+      "id": "d", "name": "Expanded rollout — held pending authority",
+      "gates": {
+        "authority": {"status": "unknown", "evidence": "SYNTHETIC EX-16: expanded rollout approval has not been established"},
+        "budget": {"status": "pass", "evidence": "SYNTHETIC EX-17: assume the financial boundary passes"},
+        "privacy": {"status": "pass", "evidence": "SYNTHETIC EX-18: assume the data-handling boundary passes"}
+      }
+    }
+  ]
+}

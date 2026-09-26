@@ -1,0 +1,513 @@
+{
+  "type": "object",
+  "properties": {
+    "archive": {
+      "type": "null"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "availableBytes": {
+            "type": "integer"
+          },
+          "availableFileCount": {
+            "type": "integer"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "directoryPage": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "incompleteSkills": {
+            "type": "integer"
+          },
+          "missingFileCount": {
+            "type": "integer"
+          },
+          "missingHistoricalBytes": {
+            "type": "integer"
+          },
+          "recordedWarningSkills": {
+            "type": "integer"
+          },
+          "skillIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "availableBytes",
+          "availableFileCount",
+          "count",
+          "directoryPage",
+          "id",
+          "incompleteSkills",
+          "missingFileCount",
+          "missingHistoricalBytes",
+          "recordedWarningSkills",
+          "skillIds",
+          "title"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "categoryCount": {
+      "type": "integer"
+    },
+    "childTables": {
+      "type": "object",
+      "properties": {
+        "code-blocks.csv": {
+          "type": "string"
+        },
+        "files.csv": {
+          "type": "string"
+        },
+        "references.csv": {
+          "type": "string"
+        },
+        "sections.csv": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code-blocks.csv",
+        "files.csv",
+        "references.csv",
+        "sections.csv"
+      ],
+      "additionalProperties": true
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "commands": {
+            "type": "integer"
+          },
+          "csv": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "index": {
+            "type": "string"
+          },
+          "packageOnly": {
+            "type": "integer"
+          },
+          "skills": {
+            "type": "integer"
+          },
+          "sourcePages": {
+            "type": "integer"
+          },
+          "storage": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "commands",
+          "csv",
+          "id",
+          "index",
+          "packageOnly",
+          "skills",
+          "sourcePages",
+          "storage"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "csvTypes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "enum": [
+            "string",
+            "nullable-string",
+            "integer",
+            "json",
+            "mixed"
+          ]
+        }
+      }
+    },
+    "decodingNote": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "availableBytes": {
+          "type": "integer"
+        },
+        "availableFiles": {
+          "type": "integer"
+        },
+        "codeBlocks": {
+          "type": "integer"
+        },
+        "hashAlgorithm": {
+          "type": "string"
+        },
+        "methods": {
+          "type": "object",
+          "properties": {
+            "content": {
+              "type": "string"
+            },
+            "csv": {
+              "type": "string"
+            },
+            "keywords": {
+              "type": "string"
+            },
+            "markdown": {
+              "type": "string"
+            },
+            "metadata": {
+              "type": "string"
+            },
+            "readiness": {
+              "type": "string"
+            },
+            "references": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "content",
+            "csv",
+            "keywords",
+            "markdown",
+            "metadata",
+            "readiness",
+            "references"
+          ],
+          "additionalProperties": true
+        },
+        "missingFiles": {
+          "type": "integer"
+        },
+        "missingHistoricalBytes": {
+          "type": "integer"
+        },
+        "references": {
+          "type": "integer"
+        },
+        "sections": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "availableBytes",
+        "availableFiles",
+        "codeBlocks",
+        "hashAlgorithm",
+        "methods",
+        "missingFiles",
+        "missingHistoricalBytes",
+        "references",
+        "sections"
+      ],
+      "additionalProperties": true
+    },
+    "discoverableSkillCount": {
+      "type": "integer"
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "missingReferenceFiles": {
+      "type": "integer"
+    },
+    "note": {
+      "type": "string"
+    },
+    "recordOverrides": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": true
+    },
+    "recordsTable": {
+      "type": "string"
+    },
+    "root": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 4
+    },
+    "skillCount": {
+      "type": "integer"
+    },
+    "storageFormat": {
+      "type": "string"
+    },
+    "tables": {
+      "type": "object",
+      "properties": {
+        "categories.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        },
+        "code-blocks.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        },
+        "files.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        },
+        "references.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        },
+        "sections.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        },
+        "skills.csv": {
+          "type": "object",
+          "properties": {
+            "bytes": {
+              "type": "integer"
+            },
+            "columnCount": {
+              "type": "integer"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "file": {
+              "type": "string"
+            },
+            "largestCellCharacters": {
+              "type": "integer"
+            },
+            "rows": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "bytes",
+            "columnCount",
+            "columns",
+            "file",
+            "largestCellCharacters",
+            "rows"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "categories.csv",
+        "code-blocks.csv",
+        "files.csv",
+        "references.csv",
+        "sections.csv",
+        "skills.csv"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "archive",
+    "categories",
+    "categoryCount",
+    "childTables",
+    "collections",
+    "csvTypes",
+    "decodingNote",
+    "details",
+    "discoverableSkillCount",
+    "generatedAt",
+    "missingReferenceFiles",
+    "note",
+    "recordOverrides",
+    "recordsTable",
+    "root",
+    "schemaVersion",
+    "skillCount",
+    "storageFormat",
+    "tables"
+  ],
+  "additionalProperties": true,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Categorized Skill Discovery Index v4",
+  "description": "Discovery metadata only. Current files are measured; missing reference content is not restored or inferred."
+}

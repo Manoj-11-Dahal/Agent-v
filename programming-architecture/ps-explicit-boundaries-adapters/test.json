@@ -1,0 +1,16 @@
+[
+    {
+        "name": "discount_logic_isolation",
+        "spec": "We have a function `calculate_order_discount(order_id)` that needs to fetch the user's order history to determine the discount tier.\n\nCurrently, it imports `db_client` directly and queries the database inside the calculation logic. This makes it impossible to run simple unit tests on the discount rules without spinning up a test database.\n\nRewrite this feature so that we can verify the discount logic with instant, in-memory unit tests, while still being able to connect to the real database in production.",
+        "expected": {
+            "focus": "Does the solution introduce an interface/abstraction for the data fetching? Is the logic separated from the DB call?"
+        }
+    },
+    {
+        "name": "infrastructure_pollution_analysis",
+        "spec": "Review this code snippet:\n\n```javascript\nclass InvoiceService {\n  process(invoice) {\n    if (invoice.amount > 10000) {\n      const sns = new AWS.SNS(); // Direct AWS usage\n      sns.publish({ topic: 'high-value-tx', message: JSON.stringify(invoice) });\n    }\n    // ... rest of logic\n  }\n}\n```\n\nWhat are the long-term maintainability problems with instantiation like this inside business logic?",
+        "expected": {
+            "focus": "Does the answer mention vendor lock-in, testing difficulties, or mixing concerns?"
+        }
+    }
+]

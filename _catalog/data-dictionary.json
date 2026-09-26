@@ -1,0 +1,1137 @@
+{
+  "schemaVersion": 4,
+  "root": "/home/user/skills",
+  "joinKey": "skills.csv.id = child CSV skillId",
+  "methods": {
+    "content": "Hashes and text statistics are computed from available file bytes. Missing references have historical sizes but null hashes and content statistics.",
+    "markdown": "Line-based extraction of ATX headings, fenced code blocks, inline links, link definitions and HTTP(S) mentions; not a complete CommonMark parser. Line numbers are 1-based and inclusive.",
+    "keywords": "Up to 48 automatically selected TF-IDF terms from entry-point body text; retrieval hints, not declared capabilities or exhaustive full-text indexing.",
+    "references": "Local destinations checked for presence within the library only. External URLs, fragments and dynamic destinations are not validated or fetched.",
+    "metadata": "All YAML frontmatter fields retained. YAML-specific dates/sets and non-finite numbers normalized to JSON-compatible values. No missing authors, versions, licenses or origins are invented.",
+    "readiness": "No-known-missing-files means inventory presence only; not runtime readiness, permission approval, security certification, or a completeness guarantee against upstream.",
+    "csv": "UTF-8, RFC-style CSV quoting; lists/objects encoded as compact JSON. Dangerous spreadsheet strings are prefixed with an apostrophe. The decoded JSON view preserves exact original string values; the manifest defines typed CSV decoding and any necessary overrides."
+  },
+  "tables": {
+    "skills.csv": {
+      "file": "skills.csv",
+      "rows": 2955,
+      "columns": [
+        "id",
+        "name",
+        "category",
+        "categoryTitle",
+        "directory",
+        "path",
+        "absolutePath",
+        "description",
+        "tags",
+        "author",
+        "version",
+        "license",
+        "compatibility",
+        "declaredSource",
+        "whenToUse",
+        "dependencies",
+        "tools",
+        "permissions",
+        "inventoryStatus",
+        "fileCount",
+        "availableFileCount",
+        "missingCount",
+        "packedCount",
+        "recordedWarning",
+        "warningProvenance",
+        "searchKeywords",
+        "metadataFields",
+        "frontmatter",
+        "document.title",
+        "document.sha256",
+        "document.bytes",
+        "document.characters",
+        "document.lines",
+        "document.words",
+        "document.bodyStartLine",
+        "document.frontmatterStartLine",
+        "document.frontmatterEndLine",
+        "document.sectionCount",
+        "document.codeBlockCount",
+        "document.referenceCount",
+        "document.codeLanguages",
+        "inventory.availableBytes",
+        "inventory.missingHistoricalBytes",
+        "inventory.availableTextFiles",
+        "inventory.availableBinaryOrNonUtf8Files",
+        "inventory.availableContentFingerprint",
+        "inventory.extensions",
+        "inventory.roles",
+        "referenceStatusCounts",
+        "declared:/acknowledgments",
+        "declared:/allowed-tools",
+        "declared:/argument",
+        "declared:/argument-hint",
+        "declared:/author",
+        "declared:/category",
+        "declared:/compatibility",
+        "declared:/context",
+        "declared:/data_classification",
+        "declared:/dependencies",
+        "declared:/depends_on_binary",
+        "declared:/depends_on_skill",
+        "declared:/description",
+        "declared:/disable-model-invocation",
+        "declared:/effort",
+        "declared:/evals",
+        "declared:/infer",
+        "declared:/license",
+        "declared:/metadata.hermes.tags",
+        "declared:/metadata/abstract",
+        "declared:/metadata/agents",
+        "declared:/metadata/argument-hint",
+        "declared:/metadata/artifact",
+        "declared:/metadata/author",
+        "declared:/metadata/author_contact",
+        "declared:/metadata/author_url",
+        "declared:/metadata/blast-radius",
+        "declared:/metadata/category",
+        "declared:/metadata/classification",
+        "declared:/metadata/compatibility",
+        "declared:/metadata/compatible_with",
+        "declared:/metadata/data-classification",
+        "declared:/metadata/data_classification",
+        "declared:/metadata/date",
+        "declared:/metadata/docs",
+        "declared:/metadata/domain",
+        "declared:/metadata/endpoint-openapi-schemas",
+        "declared:/metadata/environment",
+        "declared:/metadata/frameworks",
+        "declared:/metadata/github-url",
+        "declared:/metadata/hsb_ip_version",
+        "declared:/metadata/interactive",
+        "declared:/metadata/kind",
+        "declared:/metadata/languages",
+        "declared:/metadata/min-flare-version",
+        "declared:/metadata/min_compat_rev",
+        "declared:/metadata/next_skill",
+        "declared:/metadata/organization",
+        "declared:/metadata/output-format",
+        "declared:/metadata/owner",
+        "declared:/metadata/package",
+        "declared:/metadata/permissions",
+        "declared:/metadata/permissions/file_read",
+        "declared:/metadata/permissions/file_write",
+        "declared:/metadata/permissions/shell",
+        "declared:/metadata/portable",
+        "declared:/metadata/previous_skill",
+        "declared:/metadata/related-skills",
+        "declared:/metadata/requires",
+        "declared:/metadata/reviewed",
+        "declared:/metadata/risk_tier",
+        "declared:/metadata/role",
+        "declared:/metadata/scope",
+        "declared:/metadata/service",
+        "declared:/metadata/short-description",
+        "declared:/metadata/source_artifact",
+        "declared:/metadata/stage",
+        "declared:/metadata/status",
+        "declared:/metadata/tags",
+        "declared:/metadata/team",
+        "declared:/metadata/three-version",
+        "declared:/metadata/tool-version",
+        "declared:/metadata/triggers",
+        "declared:/metadata/upstream",
+        "declared:/metadata/upstream/branch",
+        "declared:/metadata/upstream/index_skill",
+        "declared:/metadata/upstream/index_skill_name",
+        "declared:/metadata/upstream/repo",
+        "declared:/metadata/upstream/sibling_skills",
+        "declared:/metadata/upstream/skills_dir",
+        "declared:/metadata/upstream/skills_dir_alias",
+        "declared:/metadata/upstream_clone_path",
+        "declared:/metadata/upstream_override_env",
+        "declared:/metadata/use-cases",
+        "declared:/metadata/vendor",
+        "declared:/metadata/version",
+        "declared:/name",
+        "declared:/origin",
+        "declared:/owner",
+        "declared:/paths",
+        "declared:/permissions",
+        "declared:/permissions/env",
+        "declared:/permissions/file_read",
+        "declared:/permissions/file_write",
+        "declared:/permissions/network",
+        "declared:/permissions/shell/allowed_scripts",
+        "declared:/reviewed",
+        "declared:/service",
+        "declared:/severity",
+        "declared:/source",
+        "declared:/tags",
+        "declared:/title",
+        "declared:/tools",
+        "declared:/triggers",
+        "declared:/user-invocable",
+        "declared:/user_invocable",
+        "declared:/version",
+        "declared:/when-to-use",
+        "declared:/when_to_use"
+      ],
+      "columnCount": 158,
+      "largestCellCharacters": 4328,
+      "bytes": 9055152,
+      "fields": [
+        {
+          "name": "id",
+          "description": "Stable skill identifier derived from the canonical skill name (SHA-256 prefix); unaffected by category renaming."
+        },
+        {
+          "name": "name",
+          "description": "Exact canonical skill folder name and declared skill name."
+        },
+        {
+          "name": "category",
+          "description": "Exact physical category folder; 3D-simulation is case-sensitive."
+        },
+        {
+          "name": "categoryTitle",
+          "description": "Human-readable category label; existing assignments are preserved."
+        },
+        {
+          "name": "directory",
+          "description": "Skill directory relative to /home/user/skills."
+        },
+        {
+          "name": "path",
+          "description": "SKILL.md entry point relative to the library root."
+        },
+        {
+          "name": "absolutePath",
+          "description": "Current absolute entry-point path in this workspace."
+        },
+        {
+          "name": "description",
+          "description": "Full declared description; not shortened in these exports."
+        },
+        {
+          "name": "tags",
+          "description": "Consolidated tags from supported frontmatter locations; raw declarations remain in frontmatter."
+        },
+        {
+          "name": "author",
+          "description": "Declared author, with existing metadata/owner fallbacks; blank when unavailable."
+        },
+        {
+          "name": "version",
+          "description": "Declared version, not an inferred upstream revision."
+        },
+        {
+          "name": "license",
+          "description": "Declared license text, not a legal validation of every file."
+        },
+        {
+          "name": "compatibility",
+          "description": "Declared compatibility, not a check of installed runtimes."
+        },
+        {
+          "name": "declaredSource",
+          "description": "Retained source/origin declaration where provided. Deleted repository tracking is not reconstructed."
+        },
+        {
+          "name": "whenToUse",
+          "description": "Triggers/use-case value from supported metadata locations; all other declarations are retained in frontmatter."
+        },
+        {
+          "name": "dependencies",
+          "description": "Declared top-level dependencies, depends_on_skill, and depends_on_binary."
+        },
+        {
+          "name": "tools",
+          "description": "Declared allowed-tools/tools value; not enabled or installed tools."
+        },
+        {
+          "name": "permissions",
+          "description": "Declared permissions; not permission grants."
+        },
+        {
+          "name": "inventoryStatus",
+          "description": "reference-incomplete or no-known-missing-files. Neither implies operational readiness."
+        },
+        {
+          "name": "fileCount",
+          "description": "Total known file locations, including missing references."
+        },
+        {
+          "name": "availableFileCount",
+          "description": "File locations currently available in the retained library."
+        },
+        {
+          "name": "missingCount",
+          "description": "Known reference file locations unavailable after archive removal."
+        },
+        {
+          "name": "packedCount",
+          "description": "Currently packed references; zero after the requested archive deletion."
+        },
+        {
+          "name": "recordedWarning",
+          "description": "Partial historical installer warning. Blank does not mean safe or scanned."
+        },
+        {
+          "name": "warningProvenance",
+          "description": "Origin and limits of the retained warning."
+        },
+        {
+          "name": "searchKeywords",
+          "description": "Up to 48 TF-IDF-selected body terms; automatically extracted retrieval hints."
+        },
+        {
+          "name": "metadataFields",
+          "description": "JSON Pointer paths to every observed frontmatter leaf, including arrays and empty containers."
+        },
+        {
+          "name": "frontmatter",
+          "description": "Complete declared metadata object. The decoded JSON view preserves original types and exact strings."
+        },
+        {
+          "name": "document.title",
+          "description": "First extracted ATX heading, not an inferred title."
+        },
+        {
+          "name": "document.sha256",
+          "description": "SHA-256 of exact current SKILL.md bytes."
+        },
+        {
+          "name": "document.bytes",
+          "description": "Current entry-point byte length."
+        },
+        {
+          "name": "document.characters",
+          "description": "Unicode character count in decoded UTF-8 entry point."
+        },
+        {
+          "name": "document.lines",
+          "description": "Line count in the full entry point."
+        },
+        {
+          "name": "document.words",
+          "description": "Whitespace-separated token count; a text statistic, not a model-token count."
+        },
+        {
+          "name": "document.bodyStartLine",
+          "description": "First body line after the closing frontmatter delimiter, 1-based."
+        },
+        {
+          "name": "document.frontmatterStartLine",
+          "description": "First YAML content line, excluding the delimiter."
+        },
+        {
+          "name": "document.frontmatterEndLine",
+          "description": "Last YAML content line, excluding the delimiter."
+        },
+        {
+          "name": "document.sectionCount",
+          "description": "Count of extracted ATX headings at all levels, outside code fences."
+        },
+        {
+          "name": "document.codeBlockCount",
+          "description": "Number of extracted fenced code blocks, including unclosed blocks."
+        },
+        {
+          "name": "document.referenceCount",
+          "description": "Number of extracted links/URL mentions; heuristic, not exhaustive parsing."
+        },
+        {
+          "name": "document.codeLanguages",
+          "description": "Counts by declared code-fence language/info token, not runtime requirements."
+        },
+        {
+          "name": "inventory.availableBytes",
+          "description": "Total bytes across currently available files."
+        },
+        {
+          "name": "inventory.missingHistoricalBytes",
+          "description": "Sum of previously recorded sizes for missing references; not measured current content."
+        },
+        {
+          "name": "inventory.availableTextFiles",
+          "description": "Available UTF-8-decodable files without NUL bytes."
+        },
+        {
+          "name": "inventory.availableBinaryOrNonUtf8Files",
+          "description": "Available files not classified as UTF-8 text by this heuristic."
+        },
+        {
+          "name": "inventory.availableContentFingerprint",
+          "description": "SHA-256 of ordered available path + NUL + file digest + newline records. Not a full upstream package hash."
+        },
+        {
+          "name": "inventory.extensions",
+          "description": "Counts by filename extension, including missing locations; (none) indicates no extension."
+        },
+        {
+          "name": "inventory.roles",
+          "description": "Filename-based roles; classification hints, not verified capabilities."
+        },
+        {
+          "name": "referenceStatusCounts",
+          "description": "Counts of observed local/external/dynamic link statuses."
+        },
+        {
+          "name": "declared:/acknowledgments",
+          "description": "Exact frontmatter leaf at JSON Pointer /acknowledgments. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/allowed-tools",
+          "description": "Exact frontmatter leaf at JSON Pointer /allowed-tools. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/argument",
+          "description": "Exact frontmatter leaf at JSON Pointer /argument. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/argument-hint",
+          "description": "Exact frontmatter leaf at JSON Pointer /argument-hint. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/author",
+          "description": "Exact frontmatter leaf at JSON Pointer /author. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/category",
+          "description": "Exact frontmatter leaf at JSON Pointer /category. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/compatibility",
+          "description": "Exact frontmatter leaf at JSON Pointer /compatibility. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/context",
+          "description": "Exact frontmatter leaf at JSON Pointer /context. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/data_classification",
+          "description": "Exact frontmatter leaf at JSON Pointer /data_classification. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/dependencies",
+          "description": "Exact frontmatter leaf at JSON Pointer /dependencies. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/depends_on_binary",
+          "description": "Exact frontmatter leaf at JSON Pointer /depends_on_binary. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/depends_on_skill",
+          "description": "Exact frontmatter leaf at JSON Pointer /depends_on_skill. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/description",
+          "description": "Exact frontmatter leaf at JSON Pointer /description. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/disable-model-invocation",
+          "description": "Exact frontmatter leaf at JSON Pointer /disable-model-invocation. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/effort",
+          "description": "Exact frontmatter leaf at JSON Pointer /effort. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/evals",
+          "description": "Exact frontmatter leaf at JSON Pointer /evals. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/infer",
+          "description": "Exact frontmatter leaf at JSON Pointer /infer. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/license",
+          "description": "Exact frontmatter leaf at JSON Pointer /license. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata.hermes.tags",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata.hermes.tags. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/abstract",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/abstract. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/agents",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/agents. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/argument-hint",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/argument-hint. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/artifact",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/artifact. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/author",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/author. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/author_contact",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/author_contact. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/author_url",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/author_url. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/blast-radius",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/blast-radius. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/category",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/category. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/classification",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/classification. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/compatibility",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/compatibility. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/compatible_with",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/compatible_with. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/data-classification",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/data-classification. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/data_classification",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/data_classification. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/date",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/date. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/docs",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/docs. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/domain",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/domain. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/endpoint-openapi-schemas",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/endpoint-openapi-schemas. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/environment",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/environment. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/frameworks",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/frameworks. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/github-url",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/github-url. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/hsb_ip_version",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/hsb_ip_version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/interactive",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/interactive. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/kind",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/kind. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/languages",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/languages. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/min-flare-version",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/min-flare-version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/min_compat_rev",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/min_compat_rev. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/next_skill",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/next_skill. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/organization",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/organization. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/output-format",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/output-format. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/owner",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/owner. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/package",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/package. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/permissions",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/permissions. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/permissions/file_read",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/permissions/file_read. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/permissions/file_write",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/permissions/file_write. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/permissions/shell",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/permissions/shell. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/portable",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/portable. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/previous_skill",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/previous_skill. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/related-skills",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/related-skills. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/requires",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/requires. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/reviewed",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/reviewed. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/risk_tier",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/risk_tier. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/role",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/role. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/scope",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/scope. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/service",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/service. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/short-description",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/short-description. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/source_artifact",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/source_artifact. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/stage",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/stage. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/status",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/status. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/tags",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/tags. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/team",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/team. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/three-version",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/three-version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/tool-version",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/tool-version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/triggers",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/triggers. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/branch",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/branch. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/index_skill",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/index_skill. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/index_skill_name",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/index_skill_name. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/repo",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/repo. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/sibling_skills",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/sibling_skills. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/skills_dir",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/skills_dir. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream/skills_dir_alias",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream/skills_dir_alias. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream_clone_path",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream_clone_path. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/upstream_override_env",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/upstream_override_env. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/use-cases",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/use-cases. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/vendor",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/vendor. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/metadata/version",
+          "description": "Exact frontmatter leaf at JSON Pointer /metadata/version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/name",
+          "description": "Exact frontmatter leaf at JSON Pointer /name. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/origin",
+          "description": "Exact frontmatter leaf at JSON Pointer /origin. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/owner",
+          "description": "Exact frontmatter leaf at JSON Pointer /owner. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/paths",
+          "description": "Exact frontmatter leaf at JSON Pointer /paths. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions/env",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions/env. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions/file_read",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions/file_read. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions/file_write",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions/file_write. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions/network",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions/network. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/permissions/shell/allowed_scripts",
+          "description": "Exact frontmatter leaf at JSON Pointer /permissions/shell/allowed_scripts. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/reviewed",
+          "description": "Exact frontmatter leaf at JSON Pointer /reviewed. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/service",
+          "description": "Exact frontmatter leaf at JSON Pointer /service. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/severity",
+          "description": "Exact frontmatter leaf at JSON Pointer /severity. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/source",
+          "description": "Exact frontmatter leaf at JSON Pointer /source. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/tags",
+          "description": "Exact frontmatter leaf at JSON Pointer /tags. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/title",
+          "description": "Exact frontmatter leaf at JSON Pointer /title. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/tools",
+          "description": "Exact frontmatter leaf at JSON Pointer /tools. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/triggers",
+          "description": "Exact frontmatter leaf at JSON Pointer /triggers. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/user-invocable",
+          "description": "Exact frontmatter leaf at JSON Pointer /user-invocable. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/user_invocable",
+          "description": "Exact frontmatter leaf at JSON Pointer /user_invocable. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/version",
+          "description": "Exact frontmatter leaf at JSON Pointer /version. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/when-to-use",
+          "description": "Exact frontmatter leaf at JSON Pointer /when-to-use. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        },
+        {
+          "name": "declared:/when_to_use",
+          "description": "Exact frontmatter leaf at JSON Pointer /when_to_use. Absent values are blank; full frontmatter disambiguates absent and declared empty values."
+        }
+      ]
+    },
+    "files.csv": {
+      "file": "files.csv",
+      "rows": 15795,
+      "columns": [
+        "skillId",
+        "path",
+        "storage",
+        "available",
+        "bytes",
+        "sizeSource",
+        "extension",
+        "role",
+        "mimeType",
+        "sha256",
+        "contentKind",
+        "encoding",
+        "lines",
+        "words",
+        "characters",
+        "executableBit"
+      ],
+      "columnCount": 16,
+      "largestCellCharacters": 125,
+      "bytes": 2921461,
+      "fields": [
+        {
+          "name": "skillId",
+          "description": "Foreign key to skills.csv.id."
+        },
+        {
+          "name": "path",
+          "description": "File path relative to its skill directory; use with find.py --skill NAME --read PATH."
+        },
+        {
+          "name": "storage",
+          "description": "file or missing in the current retained library."
+        },
+        {
+          "name": "available",
+          "description": "Whether this file location is currently present."
+        },
+        {
+          "name": "bytes",
+          "description": "Current bytes if available, otherwise the historical archive size."
+        },
+        {
+          "name": "sizeSource",
+          "description": "current-file-bytes or historical-archive-inventory."
+        },
+        {
+          "name": "extension",
+          "description": "Lowercase filename suffix; blank for extensionless paths."
+        },
+        {
+          "name": "role",
+          "description": "Heuristic role based on filename/path/extension."
+        },
+        {
+          "name": "mimeType",
+          "description": "Guessed MIME type from extension, not content validation."
+        },
+        {
+          "name": "sha256",
+          "description": "Current file content digest; null/blank for missing files."
+        },
+        {
+          "name": "contentKind",
+          "description": "text, binary-or-non-utf8, or unavailable."
+        },
+        {
+          "name": "encoding",
+          "description": "utf-8 when text was decoded; null/blank otherwise."
+        },
+        {
+          "name": "lines",
+          "description": "Current decoded text line count; null/blank when unavailable/non-text."
+        },
+        {
+          "name": "words",
+          "description": "Whitespace token count; not model tokens."
+        },
+        {
+          "name": "characters",
+          "description": "Unicode text character count; null/blank for unavailable/non-text."
+        },
+        {
+          "name": "executableBit",
+          "description": "Filesystem executable bit, not permission approval or proof it can run; null/blank if unavailable."
+        }
+      ]
+    },
+    "sections.csv": {
+      "file": "sections.csv",
+      "rows": 40352,
+      "columns": [
+        "skillId",
+        "order",
+        "level",
+        "title",
+        "startLine",
+        "endLine",
+        "parentOrder"
+      ],
+      "columnCount": 7,
+      "largestCellCharacters": 214,
+      "bytes": 2408700,
+      "fields": [
+        {
+          "name": "skillId",
+          "description": "Foreign key to skills.csv.id."
+        },
+        {
+          "name": "order",
+          "description": "1-based sequence within this skill and this table."
+        },
+        {
+          "name": "level",
+          "description": "ATX heading depth, 1 to 6."
+        },
+        {
+          "name": "title",
+          "description": "Heading text as extracted, or human-readable category title."
+        },
+        {
+          "name": "startLine",
+          "description": "1-based inclusive source start line."
+        },
+        {
+          "name": "endLine",
+          "description": "1-based inclusive source end line. Sections include nested subsection content."
+        },
+        {
+          "name": "parentOrder",
+          "description": "Nearest parent heading order; null/blank for top-level headings."
+        }
+      ]
+    },
+    "references.csv": {
+      "file": "references.csv",
+      "rows": 22270,
+      "columns": [
+        "skillId",
+        "order",
+        "line",
+        "column",
+        "kind",
+        "label",
+        "target",
+        "insideCodeBlock",
+        "resolvedPath",
+        "availability"
+      ],
+      "columnCount": 10,
+      "largestCellCharacters": 260,
+      "bytes": 3364210,
+      "fields": [
+        {
+          "name": "skillId",
+          "description": "Foreign key to skills.csv.id."
+        },
+        {
+          "name": "order",
+          "description": "1-based sequence within this skill and this table."
+        },
+        {
+          "name": "line",
+          "description": "1-based source line for this link/mention."
+        },
+        {
+          "name": "column",
+          "description": "1-based source column of the extracted match."
+        },
+        {
+          "name": "kind",
+          "description": "markdown-link, image, link-definition, or url-mention."
+        },
+        {
+          "name": "label",
+          "description": "Extracted link label; empty for bare URL mentions."
+        },
+        {
+          "name": "target",
+          "description": "Literal extracted destination; never fetched or executed."
+        },
+        {
+          "name": "insideCodeBlock",
+          "description": "True for URL mentions found inside a fenced example."
+        },
+        {
+          "name": "resolvedPath",
+          "description": "Resolved library-relative local path, or null for non-local/unresolved destinations."
+        },
+        {
+          "name": "availability",
+          "description": "available-file, available-directory, missing-indexed, not-found, external-unchecked, fragment-unchecked, dynamic-unchecked, outside-library, or unparsed."
+        }
+      ]
+    },
+    "code-blocks.csv": {
+      "file": "code-blocks.csv",
+      "rows": 18397,
+      "columns": [
+        "skillId",
+        "order",
+        "language",
+        "info",
+        "startLine",
+        "endLine",
+        "closed",
+        "contentBytes",
+        "contentSha256"
+      ],
+      "columnCount": 9,
+      "largestCellCharacters": 78,
+      "bytes": 2189607,
+      "fields": [
+        {
+          "name": "skillId",
+          "description": "Foreign key to skills.csv.id."
+        },
+        {
+          "name": "order",
+          "description": "1-based sequence within this skill and this table."
+        },
+        {
+          "name": "language",
+          "description": "First code-fence info token; blank if unspecified."
+        },
+        {
+          "name": "info",
+          "description": "Complete code-fence info string."
+        },
+        {
+          "name": "startLine",
+          "description": "1-based inclusive source start line."
+        },
+        {
+          "name": "endLine",
+          "description": "1-based inclusive source end line. Sections include nested subsection content."
+        },
+        {
+          "name": "closed",
+          "description": "Whether a closing fence was observed."
+        },
+        {
+          "name": "contentBytes",
+          "description": "Code block body byte count, excluding fence delimiters."
+        },
+        {
+          "name": "contentSha256",
+          "description": "SHA-256 of the exact UTF-8 code-block payload; no code executed."
+        }
+      ]
+    },
+    "categories.csv": {
+      "file": "categories.csv",
+      "rows": 44,
+      "columns": [
+        "id",
+        "title",
+        "count",
+        "availableFileCount",
+        "missingFileCount",
+        "incompleteSkills",
+        "recordedWarningSkills",
+        "availableBytes",
+        "missingHistoricalBytes",
+        "directoryPage",
+        "skillIds"
+      ],
+      "columnCount": 11,
+      "largestCellCharacters": 7401,
+      "bytes": 85200,
+      "fields": [
+        {
+          "name": "id",
+          "description": "Exact category folder identifier."
+        },
+        {
+          "name": "title",
+          "description": "Heading text as extracted, or human-readable category title."
+        },
+        {
+          "name": "count",
+          "description": "Number of skills in this category."
+        },
+        {
+          "name": "availableFileCount",
+          "description": "File locations currently available in the retained library."
+        },
+        {
+          "name": "missingFileCount",
+          "description": "Known missing file locations in this category."
+        },
+        {
+          "name": "incompleteSkills",
+          "description": "Skills with at least one known missing reference."
+        },
+        {
+          "name": "recordedWarningSkills",
+          "description": "Skills with a retained partial historical warning."
+        },
+        {
+          "name": "availableBytes",
+          "description": "Current available bytes in this category."
+        },
+        {
+          "name": "missingHistoricalBytes",
+          "description": "Previously recorded sizes of this category’s missing references."
+        },
+        {
+          "name": "directoryPage",
+          "description": "Category Markdown directory path relative to the library root."
+        },
+        {
+          "name": "skillIds",
+          "description": "JSON array of member skill identifiers."
+        }
+      ]
+    }
+  }
+}

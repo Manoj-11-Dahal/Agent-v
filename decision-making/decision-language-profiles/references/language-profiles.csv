@@ -1,0 +1,149 @@
+name,paradigm,type-system,memory,concurrency,error-handling,build,tests,lint,fuzz,verify,platform,notes
+ABAP,procedural/object,static/dynamic-mixed,platform-gc,session-parallel,exceptions,SAP-tooling,ABAP-Unit,SCI/ATC,n/a,n/a,SAP-stack,Vendor ecosystem constrains deployment and tooling choices
+ActionScript,object/prototype,dynamic,gc,event-loop,exceptions,Flash/Flex,FlexUnit,n/a,n/a,n/a,legacy-runtime,Legacy runtime; treat as maintenance-only unless constrained
+Ada,procedural/object,static/strong,manual-or-gc,tasks,exceptions,GNAT,AUnit,GNATcheck,n/a,SPARK-subset,bare-metal-to-server,Contracts and SPARK subset support high-assurance work
+Agda,functional/dependently-typed,static/dependent,gc,coinduction,totality,cabal/stack,built-in,n/a,n/a,proof-assistant,research,Dependent types give proofs at high proof-writing cost
+AL,procedural,dynamic,platform-gc,session,n/a,AL-compiler,AL-Test,CodeCop,n/a,n/a,Dynamics-365,Business-app platform; deployment options are platform-limited
+APL,array,dynamic,gc,operators,domain-errors,interpreter,n/a,n/a,n/a,n/a,interpreter,Extreme density; readability for others is the main risk
+Assembly,imperative,none,manual,any,flags,assembler/linker,harness-dependent,n/a,n/a,n/a,target-specific,Full control means every safety property is your responsibility
+AutoHotkey,scripting,dynamic,gc,threads,n/a,script,n/a,n/a,n/a,n/a,Windows,Automation scripting; not suited to distributed services
+AutoIt,scripting,dynamic,gc,limited,n/a,script,n/a,n/a,n/a,n/a,Windows,Windows automation; limited typing and testing ecosystems
+Awk,text-processing,dynamic,gc,n/a,exit-codes,interpreter,test-harness,n/a,n/a,n/a,POSIX,Excellent for text pipelines; poor for stateful services
+Bash,shell,dynamic,processes,processes,exit-codes/set-e,shell,bats,shellcheck,n/a,n/a,POSIX,Quoting and portability are the main correctness hazards
+Basic,procedural,weak,manual-or-gc,limited,error-codes,compiler,harness,n/a,n/a,n/a,various,Legacy dialects vary widely; check the exact variant
+Batch,scripting,none,processes,n/a,errorlevel,cmd,n/a,n/a,n/a,n/a,Windows,Windows-only glue; keep logic in a real language
+BCPL,procedural,none,manual,n/a,n/a,compiler,n/a,n/a,n/a,n/a,historical,Historical interest; unsafe by modern standards
+Bicep,declarative-IaC,static,n/a,n/a,validation,az-cli,what-if,bicep-linter,n/a,n/a,Azure,Declarative infrastructure; test with what-if and policy checks
+Bloop,functional-object,static,gc,actors,exceptions,sbt,MUnit,scalafix,scalafuzz,n/a,JVM,Research language; small ecosystem and tooling
+Boo,object,static,gc,n/a,exceptions,compiler,n/a,n/a,n/a,n/a,CLR,Effectively unmaintained; avoid for new work
+Brainfuck,esoteric,none,tape,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,interpreter,Teaching artifact only; never a production choice
+C,procedural,static/weak,manual,threads/POSIX,error-codes,make/CMake,Unity/CMocka,clang-tidy/cppcheck,libFuzzer/AFL,CBMC/Frama-C,universal,Ubiquitous and portable; memory safety is entirely on you
+C#,object/component,static/strong,gc,async/await-threads,exceptions,dotnet,xUnit/NUnit,Roslyn-analyzers,SharpFuzz,n/a,CLR,Mature tooling; nullability and async misuse remain common bugs
+C++,object/generic/multi-paradigm,static/strong,manual/RAII-smart,threads-coroutines,exceptions,CMake/Bazel,Catch2/GoogleTest,clang-tidy,libFuzzer,CBMC/Polyspace,universal,Power and complexity together; undefined behaviour is the hazard
+Ceylon,object,static,gc,n/a,exceptions,ceylon,CeylonTest,n/a,n/a,n/a,JVM/JS,Discontinued tooling; migration should be planned
+Chapel,parallel/array,static,managed,parallel-locales,exceptions,chpl,chpl-unit,n/a,n/a,n/a,HPC,Built for parallel scientific work; ecosystem still narrow
+Clojure,functional/lisp,dynamic-optional-spec,gc,STM-channels,exceptions-data,deps.edn/Leiningen,clojure.test,clj-kondo,n/a,n/a,JVM,Immutability reduces races; dynamic typing needs spec or tests
+Cobol,procedural,weak/static,platform,batch/online,status-codes,vendor-compiler,unit-frameworks,n/a,n/a,n/a,mainframe,Still critical in finance; modernisation carries real risk
+CoffeeScript,functional-transpiled,dynamic,gc,event-loop,exceptions,npm,Mocha/Jest,coffeelint,n/a,n/a,Node/browser,Transpiles to JavaScript; extra layer rarely worth it now
+Common Lisp,functional/object/multi-paradigm,dynamic,gc,threads,conditions/restarts,ASDF,FiveAM,n/a,n/a,n/a,portable,Conditions/restarts are unusually powerful error handling
+Coq,functional/dependently-typed,static/dependent,gc,n/a,totality,coqc,built-in-proofs,n/a,n/a,proof-assistant,research,Machine-checked proofs; very high specification cost
+Crystal,object,static-inferred,gc,fibers,exceptions,shards,spec,ameba,n/a,n/a,LLVM,Ruby-like syntax with static types; younger ecosystem
+CSS,declarative-style,none,n/a,n/a,cascade,bundler,visual-regression,stylelint,n/a,n/a,browsers,Cascade specificity and browser variance cause most defects
+Cuda,imperative-kernel,static,device-manual,SIMT-blocks,error-codes,nvcc,catch2-harness,n/a,n/a,n/a,NVIDIA-GPU,Host/device memory errors and races are the main hazards
+Cython,imperative/python-extension,static-python,manual-or-python,threads/GIL,exceptions,setuptools,pytest,n/a,n/a,n/a,CPython-extension,Speedup requires profiling; profiling before rewriting is mandatory
+D,object/generic/systems,static/strong,gc-or-manual,fibers-threads,exceptions,dub,unittest,dscanner,libFuzzer,n/a,native,Systems language with optional GC; check the runtime you selected
+Dart,object,static/strong,gc,isolates-async,exceptions,pub,flutter_test/dart-test,dart-analyze,n/a,n/a,Flutter/web/VM,Sound null safety; isolate model avoids shared-memory races
+Delphi,object,static,manual-refcounted,threads,exceptions,msbuild,DUnitX,n/a,n/a,n/a,Windows,Mature Windows stack; smaller hiring and library pool
+Dhall,functional-config,static/total,n/a,n/a,totality,dhall,built-in,dhall-lint,n/a,total-by-design,config,Total language cannot fail at runtime; expressiveness is limited
+Eiffel,object,static,gc-or-manual,threads,exceptions,ec,EiffelStudio-test,n/a,n/a,contract-checking,portable,Design by contract is built in; ecosystem is small
+Elixir,functional/process,dynamic,BEAM-gc,processes-OTP,pattern-matching,mix,ExUnit,credo,stream-testing,n/a,BEAM,Fault-tolerant supervision; dynamic types need Dialyzer or tests
+Elm,functional,static/strong,gc,ports,no-exceptions,elm,elm-test,elm-review,n/a,compiler-enforced,browser,No runtime exceptions by design; ports are the risky boundary
+Erlang,functional/process,dynamic,BEAM-gc,processes-OTP,pattern-matching,rebar3,EUnit/CommonTest,dialyzer,proper,n/a,BEAM,Proven for long-running fault-tolerant systems
+F#,functional-object,static/strong,gc,async-mailbox,exceptions-results,dotnet,xUnit/NUnit,FSharpLint,FsCheck,n/a,CLR,Units of measure and option types remove whole bug classes
+Factor,stack-based/concatenative,dynamic,gc,n/a,errors,factor,factor-unit-test,n/a,n/a,n/a,interpreter,Unusual model; small community limits support
+Fantom,object,static,gc,actors,exceptions,fan,fan-unit,n/a,n/a,n/a,JVM/.NET,Portable object model; very small ecosystem
+Forth,stack-based,none,manual,n/a,n/a,compiler,n/a,n/a,n/a,n/a,embedded,Minimal and portable; almost no safety net
+Fortran,procedural/array/numeric,static,manual-or-allocatable,coarrays/OpenMP,stop-codes,CMake/fpm,pytest-fortran/pFUnit,n/a,n/a,n/a,HPC,Dominant in numerical/HPC code; array-bounds errors persist
+Fuchsia-FIDL,declarative-IPC,static,n/a,n/a,n/a,fidlc,n/a,n/a,n/a,n/a,Fuchsia,Interface definition only; pair with an implementation language
+GDScript,object/script,dynamic-optional-static,gc,n/a,n/a,godot,GUT,n/a,n/a,n/a,Godot,Game scripting; static typing opt-in improves safety
+Gleam,functional,static/strong,BEAM-gc,processes,result-types,gleam,gleeunit,gleam-lint,n/a,compiler-enforced,BEAM/JS,Result types and static typing on the BEAM
+Go,procedural/concurrent,static/strong,gc,goroutines-channels,error-values,go-build,go-test,go-vet/golangci-lint,go-fuzz,n/a,static-binary,Simple concurrency; unchecked errors and data races are common
+Groovy,object/script,dynamic-or-static,JVM-gc,closures-threads,exceptions,Gradle,Spock,CodeNarc,n/a,n/a,JVM,Convenient build scripting; dynamic mode weakens safety
+Hack,object,static-gradual,HHVM-gc,async-await,exceptions,hh,PHPUnit/hack-test,hhast,n/a,n/a,HHVM,Gradual typing on HHVM; deployment is platform-specific
+Haskell,functional,static/strong,gc,STM-async,exceptions-or-either,cabal/stack,HSpec/tasty,hlint/ormolu,n/a,LiquidHaskell,GHC,Strong types remove classes of bugs; laziness needs care
+Haxe,multi-target,static,target-dependent,target-dependent,exceptions,haxe,utest,n/a,n/a,n/a,multi-target,One source to many targets; per-target behaviour varies
+HolyC,procedural,weak,manual,n/a,n/a,TempleOS,n/a,n/a,n/a,n/a,TempleOS,Niche; not a general engineering choice
+HTML,markup,none,n/a,n/a,n/a,bundler,html-validate,html-validate/axe,n/a,n/a,browsers,Semantic markup and accessibility checks matter more than syntax
+Hy,lisp/python,dynamic,Python-gc,n/a,exceptions,pip,pytest,n/a,n/a,n/a,Python,Lisp syntax on Python; tooling support is thinner
+Icon,procedural/goal-directed,dynamic,gc,n/a,goal-failure,icont,n/a,n/a,n/a,n/a,portable,Goal-directed evaluation is unusual and rarely needed
+Idris,functional/dependently-typed,static/dependent,gc,n/a,totality,idris2,built-in,n/a,n/a,proof-assistant,research,Dependent types with effects; ecosystem is young
+Inform,interactive-fiction,domain,platform,n/a,n/a,inform7,n/a,n/a,n/a,n/a,interpreter,Domain-specific; not for general software
+Io,prototype/object,dynamic,gc,coroutines,exceptions,io,n/a,n/a,n/a,n/a,interpreter,Minimal prototype language; negligible ecosystem
+J,array/functional,dynamic,gc,n/a,n/a,jconsole,n/a,n/a,n/a,n/a,interpreter,Dense array language; readability for teams is the issue
+Java,object/generic,static/strong,JVM-gc,threads-virtual-threads,exceptions,Maven/Gradle,JUnit/TestNG,SpotBugs/Checkstyle,Jazzer,n/a,JVM,Huge ecosystem; null handling and concurrency need discipline
+JavaScript,prototype/functional/multi-paradigm,dynamic,gc,event-loop-workers,exceptions,npm/bundler,Jest/Vitest,ESLint/Prettier,jsfuzz,n/a,universal-runtime,Ubiquitous; coercion and async errors dominate real defects
+JSON,data-interchange,none,n/a,n/a,n/a,n/a,schema-validators,jsonlint,n/a,n/a,universal,Schema validation is the control that matters
+Julia,multiple-dispatch/numeric,dynamic-jit-optional,gc,tasks-threads,exceptions,Pkg,Test,JuliaLint,n/a,n/a,native-JIT,Fast numerics; type instability silently hurts performance
+Kotlin,object/functional,static/strong,JVM-gc,coroutines,exceptions-results,Gradle,JUnit/kotest,detekt/ktlint,n/a,n/a,JVM/Android,Null safety in the type system; coroutine misuse is common
+Lisp,functional/multi-paradigm,dynamic,gc,threads,conditions,ASDF,FiveAM,n/a,n/a,n/a,portable,Family of dialects; pick the exact one before committing
+LiveCode,object/script,dynamic,gc,messages,n/a,LiveCode,test-livecode,n/a,n/a,n/a,desktop-mobile,Rapid app tooling; smaller ecosystem and hiring pool
+LLVM IR,intermediate-representation,static,n/a,n/a,n/a,llc/opt,lit,n/a,n/a,n/a,compiler-backend,Not a source language; used for compiler work
+Logo,educational,dynamic,gc,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,educational,Teaching language; unsuitable for production
+Lua,procedural/script,dynamic,gc,coroutines,error-pcall,LuaRocks/Makefile,busted/luaunit,luacheck,n/a,n/a,embeddable,Tiny embeddable core; 1-based indexing surprises newcomers
+Maple,symbolic-math,dynamic,gc,n/a,exceptions,worksheet,n/a,n/a,n/a,n/a,math,Symbolic mathematics; licence cost and lock-in apply
+Mathematica,symbolic-math,dynamic,gc,parallel-kernels,messages,notebook,WolframTest,n/a,n/a,n/a,math,Powerful symbolic engine; reproducibility needs care
+MATLAB,array/numeric,dynamic,gc,parfor,exceptions,mex/matlab,matlab-unittest,mlint,n/a,n/a,native,Excellent numerics; licence cost affects deployment
+Mercury,functional-logic,static/strong,gc-or-manual,n/a,modes,mmc,mercury-test,n/a,n/a,mode-checking,portable,Mode and determinism checking catches many bugs at compile time
+Miranda,functional,static,gc,n/a,n/a,compiler,n/a,n/a,n/a,n/a,historical,Historical lazy functional language
+ML,functional,static-inferred,gc,threads,exceptions,SML/NJ,SMLUnit,n/a,n/a,n/a,portable,Family including Standard ML and OCaml; strong type inference
+Modula-2,procedural/modular,static,manual,processes,n/a,compiler,n/a,n/a,n/a,n/a,portable,Modular design ancestor; niche today
+Motoko,object/actor,static,runtime-gc,actors-async,traps,dfx,motoko-test,n/a,n/a,n/a,Internet-Computer,Actor model on a specific chain; platform lock-in
+Nim,systems/multi-paradigm,static/strong,gc-or-manual-or-arc,async-threads,exceptions-or-results,nimble,unittest,nimcheck,n/a,n/a,native,Systems speed with modern syntax; check GC mode chosen
+Nix,functional-config,dynamic,n/a,n/a,evaluation-errors,nix,nix-test,nix-linter,n/a,n/a,Linux/macOS,Reproducible builds; evaluation errors are confusing at first
+Oberon,procedural/modular,static,gc,n/a,n/a,compiler,n/a,n/a,n/a,n/a,research,Minimal and clean; essentially no modern ecosystem
+Objective-C,object,static-weak-dynamic,ARC,GCD-NSOperation,exceptions,Xcode,XCTest,clang-analyzer,n/a,n/a,Apple,Legacy Apple code; Swift is preferred for new work
+OCaml,functional/object,static-inferred,gc,domains-lwt,exceptions-result,dune,Alcotest/ounit,ocaml-lint,crowbar,Coq-extraction,native-bytecode,Fast functional language; excellent type inference
+Odin,procedural/systems,static/strong,manual-defer,threads,multiple-return,odin,odin-test,odin-check,n/a,n/a,native,Simple systems language; young ecosystem
+Oz,concurrent/logic,dynamic,gc,threads/agents,exceptions,mozart,n/a,n/a,n/a,n/a,research,Multi-paradigm research language; negligible industry use
+Pascal,procedural,static,manual,n/a,n/a,fpc,fpcunit,n/a,n/a,n/a,portable,Older structured language; Free Pascal keeps it alive
+Perl,text/multi-paradigm,dynamic,gc,threads-fork,die-eval,Makefile.PL/cpanm,Test::More,Perl::Critic,n/a,n/a,portable,Superb text handling; strict/warnings discipline is essential
+PHP,scripting/object,dynamic-gradual,gc,fpm/async-ext,exceptions,composer,PHPUnit,PHPStan/Psalm,n/a,n/a,web,Huge web install base; typed declarations improve safety
+Pico,educational,dynamic,gc,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,educational,Teaching language only
+Pike,object,dynamic,gc,threads,exceptions,pike,n/a,n/a,n/a,n/a,server,Niche server language; small community
+PL/SQL,procedural-SQL,static,platform,sessions,exceptions,Oracle-tooling,utPLSQL,n/a,n/a,n/a,Oracle,Database procedural logic; keep business rules reviewable
+PostScript,stack-based/page,none,manual,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,print,Print and graphics; unsuitable for general software
+PowerShell,shell/object,dynamic-gradual,gc,jobs-runspaces,try-catch/ErrorAction,pwsh,Pester,PSScriptAnalyzer,n/a,n/a,Windows/Linux,Object pipeline; error handling defaults are a common bug source
+Prolog,logic,dynamic,gc,n/a,fail/cut,swipl,plunit,n/a,n/a,n/a,portable,Declarative search; cut and negation are subtle
+Protocol Buffers,declarative-serialization,static,n/a,n/a,n/a,protoc,generated-tests,buf-lint,n/a,n/a,cross-language,Schema evolution rules are the real correctness control
+PureScript,functional,static/strong,gc,aff,either,spago,purescript-test,purs-tidy,n/a,n/a,JS,Strict typed JavaScript alternative; smaller community than Elm
+Python,multi-paradigm/object,dynamic-gradual,gc,threads-asyncio-multiprocessing,exceptions,pip/poetry/uv,pytest/unittest,ruff/mypy,atheris,n/a,universal,Readable and broad; concurrency model choice is critical
+Q,array/functional,dynamic,gc,n/a,n/a,q,n/a,n/a,n/a,n/a,kdb,Time-series database language; niche and licence-bound
+QML,declarative-UI,dynamic-JS,gc,signals,n/a,qmake/CMake,QtTest,qmllint,n/a,n/a,Qt,Declarative UI with JavaScript logic; separate logic for testing
+Quorum,educational,static,gc,n/a,exceptions,Quorum-studio,Quorum-test,n/a,n/a,n/a,educational,Accessibility-focused teaching language
+R,statistical/functional,dynamic,gc,parallel-packages,conditions,renv/Rscript,testthat,lintr,n/a,n/a,native,Statistics standard; vectorisation and copy semantics surprise users
+Racket,functional/lisp,dynamic-optional-typed,gc,places,exceptions,raco,rackunit,n/a,n/a,n/a,portable,Excellent language-building tooling; gradual typing available
+Raku,multi-paradigm,dynamic-gradual,gc,promises-supply,exceptions,zef,Test,n/a,n/a,n/a,portable,Expressive grammar engine; performance and ecosystem are limited
+Rascal,meta-programming,static,gc,n/a,exceptions,rascal,n/a,n/a,n/a,n/a,JVM,Source-code analysis; niche academic use
+Reason,functional,static,gc,n/a,exceptions,esy/dune,jest/bs-test,n/a,n/a,Coq-extraction,JS/native,OCaml syntax for JavaScript; largely superseded by ReScript
+Rebol,data-oriented,dynamic,gc,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,portable,Homoiconic data language; niche
+Red,data-oriented,dynamic,gc,n/a,n/a,red,n/a,n/a,n/a,n/a,portable,Small footprint; negligible ecosystem
+REXX,scripting,dynamic,gc,n/a,n/a,interpreter,n/a,n/a,n/a,n/a,mainframe,Legacy IBM scripting; maintenance contexts only
+Ring,multi-paradigm,dynamic,gc,n/a,exceptions,ring,n/a,n/a,n/a,n/a,portable,Small modern language; tiny community
+Roc,functional,static/strong,gc,async,result-types,roc,roc-test,roc-check,n/a,n/a,native,No runtime exceptions by design; ecosystem is early
+Ruby,object,dynamic,gc,threads-fibers-ractors,exceptions,bundler,RSpec/Minitest,RuboCop/Sorbet,n/a,n/a,portable,Expressive; GVL limits CPU parallelism
+Rust,systems/functional,static/strong-ownership,ownership-move-semantics,async-threads-channels,result-panic,cargo,cargo-test,clippy/rustfmt,cargo-fuzz,Kani/Prusti,native-wasm,Ownership instead of GC removes memory-safety bug classes; concurrency still needs care
+SAS,statistical,dynamic,platform,n/a,n/a,SAS,SAS-unit,n/a,n/a,n/a,analytics,Analytics platform; licence and portability constraints
+Scala,object/functional,static/strong,JVM-gc,futures-actors,exceptions-try,sbt,ScalaTest/MUnit,scalafix/scalafmt,scalafuzz,n/a,JVM,Very expressive; complexity and build times are the cost
+Scheme,functional/lisp,dynamic-optional,gc,n/a,exceptions,r7rs/guile/chicken,chicken-test/SRFI-64,n/a,n/a,n/a,portable,Minimal core with many implementations; pick one first
+Scratch,visual-educational,visual,n/a,n/a,n/a,editor,n/a,n/a,n/a,n/a,educational,Teaching only
+Sed,text-processing,none,n/a,n/a,exit-codes,n/a,n/a,n/a,n/a,n/a,POSIX,Stream editing; keep scripts short and tested
+Self,prototype/object,dynamic,gc,n/a,n/a,n/a,n/a,n/a,n/a,n/a,research,Prototype pioneer; essentially historical
+Shell,scripting,dynamic,processes,processes,exit-codes,n/a,bats,shellcheck,n/a,n/a,POSIX,Same hazards as Bash; portability across shells varies
+Simula,object,static,manual,n/a,n/a,compiler,n/a,n/a,n/a,n/a,historical,Historical origin of object orientation
+Smalltalk,object,dynamic,gc,green-threads,exceptions,Pharo/Squeak,SUnit,n/a,n/a,n/a,image-based,Live image environment; deployment model differs from files
+SNAP,visual-blocks,visual,n/a,n/a,n/a,editor,n/a,n/a,n/a,n/a,educational,Teaching only
+Solidity,contract,static,gas-managed,none-transactional,require-revert,hardhat/foundry,Foundry/Hardhat-tests,solhint/slither,echidna,Certora,EVM,Immutable deployment and financial risk demand the highest tier
+SPARK,procedural/verified,static/strong,manual,tasks,contracts,gnatprove,GNATtest,GNATcheck,n/a,proof-obligations,bare-metal-to-server,Formal verification of a restricted Ada subset
+SQL,declarative-relational,static-per-dialect,platform,sessions,error-codes,migrations,pgTAP/sqlunit,sqlfluff,n/a,n/a,RDBMS,Indexes and transactions plus dialect differences dominate behaviour
+SuperCollider,audio-domain,dynamic,gc,n/a,n/a,sclang,n/a,n/a,n/a,n/a,audio,Audio synthesis; domain-specific
+Swift,object/protocol/value,static/strong,ARC,async-actors-GCD,throws-results,swift-package-manager,XCTest/SwiftTesting,swiftlint,n/a,n/a,Apple-server,Value semantics and optionals; concurrency isolation rules are subtle
+SystemVerilog,hardware-verification,static,n/a,processes,assertions,simulator,UVM,linters,n/a,formal-model-checking,EDA,Hardware and verification; simulation coverage is the evidence
+Tcl,scripting,dynamic,gc,event-loop,error-catch,tclsh,tcltest,n/a,n/a,n/a,embeddable,Everything-is-a-string model; quoting bugs are common
+TeX,typesetting-macro,macro,n/a,n/a,errors,pdflatex/xelatex,n/a,chktex,n/a,n/a,portable,Document typesetting; not general software
+Terraform HCL,declarative-IaC,static,n/a,n/a,validation,terraform,terraform-test,tflint,n/a,n/a,multi-cloud,Plan/apply review is the safety control
+TOML,config-data,none,n/a,n/a,n/a,n/a,schema-validators,taplo,n/a,n/a,universal,Schema validation prevents silent misconfiguration
+Transact-SQL,procedural-SQL,static,platform,sessions,try-catch,SSDT,tSQLt,SQLFluff,n/a,n/a,SQL-Server,Dialect-specific error handling; keep logic testable
+TypeScript,object/functional,static-structural-gradual,gc,event-loop-workers,exceptions,tsc/esbuild,Vitest/Jest,ESLint/tsc,jsfuzz,n/a,JS-runtime,Types erase at runtime; validate boundaries at runtime too
+Unison,functional/content-addressed,static,gc,distributed,ability-handlers,u,unison-test,n/a,n/a,n/a,distributed,Content-addressed code; early ecosystem
+V,systems/simple,static,manual-or-gc,coroutines,result-or-panic,v,v-test,v-fmt,n/a,n/a,native,Small fast language; maturity claims need verification
+Vala,object,static,manual-refcounted,async,exceptions,meson,n/a,n/a,n/a,n/a,GNOME,GNOME-focused; compiles to C
+Verilog,hardware-description,static,n/a,always-blocks,n/a,simulator,cocotb,linters,n/a,formal,EDA,Synthesis versus simulation semantics differ; check both
+VHDL,hardware-description,static/strong,n/a,processes,assertions,ghdl/vivado,VUnit,linters,n/a,formal,EDA,Strong typing for hardware; verbosity is the cost
+Visual Basic,object/event,static-weak,gc,async,exceptions,msbuild,MSTest,n/a,n/a,n/a,.NET,Legacy .NET UI and Office automation contexts
+WebAssembly Text,stack-vm-target,static,linear-memory,n/a,traps,wat2wasm,wasm-test,n/a,n/a,n/a,sandboxed,Sandboxed target; host boundary is where bugs live
+Wolfram Language,symbolic-math,dynamic,gc,parallel-kernels,messages,notebook,WolframTest,n/a,n/a,n/a,math,Same engine as Mathematica; licence lock-in applies
+X++,object,static,platform-gc,n/a,exceptions,Dynamics-tooling,SysTest,n/a,n/a,n/a,Dynamics-365,ERP platform language; deployment is platform-bound
+XQuery,declarative-XML,static-per-dialect,platform,n/a,errors,BaseX/eXist,XQTS,n/a,n/a,n/a,XML-stores,Declarative XML processing; niche today
+XSLT,declarative-transform,static-per-version,platform,n/a,errors,Saxon/xsltproc,XSpec,n/a,n/a,n/a,XML,Version differences change semantics; pin the processor
+YAML,config-data,none,n/a,n/a,n/a,n/a,schema-validators,yamllint,n/a,n/a,universal,Implicit typing and indentation are frequent defect sources
+Zig,systems,static/strong,manual-allocator-explicit,async-threads,error-unions,zig-build,zig-test,zig-fmt,n/a,n/a,native-wasm,Explicit allocators and comptime; ecosystem still maturing

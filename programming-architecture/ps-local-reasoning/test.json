@@ -1,0 +1,16 @@
+[
+    {
+        "name": "spaghetti_dependencies",
+        "spec": "The `calculate_invoice_total(invoice_id)` function is hard to debug. To know what it will return, you have to check the state of the Global Feature Flags, the Session Singleton, and the current system time.\n\nRewrite this function so that its behavior is completely deterministic based *only* on its input arguments.",
+        "expected": {
+            "focus": "Does the refactor pass the feature flags, session data, and time in as arguments?"
+        }
+    },
+    {
+        "name": "hidden_api_call",
+        "spec": "A developer wrote a `User.save()` method. It looks like it just saves to the database, but secretly it also makes an HTTP call to a CRM system if the user is a VIP. This causes the test suite to hang randomly.\n\nWhy is this design problematic for someone reading the code for the first time? How would you fix it to make the side effect explicit?",
+        "expected": {
+            "focus": "Does the solution propose passing the CRM service as a dependency or returning an instruction to sync?"
+        }
+    }
+]
